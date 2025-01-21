@@ -1,0 +1,294 @@
+/* Applique une famille de polices et des styles généraux au texte de la page. */
+body {
+    font-family: "poppins", sans-serif; /* Utilise la police Poppins ou une police sans-serif par défaut. */
+    font-weight: 400; /* Définit le poids de la police à normal. */
+    font-style: normal; /* Pas de style italique. */
+    line-height: 1.6; /* Définit l'interligne pour une meilleure lisibilité. */
+    margin: 0; /* Supprime les marges par défaut. */
+    padding: 0; /* Supprime les paddings par défaut. */
+    background-color: #f4f4f4; /* Définit une couleur de fond gris clair. */
+    color: #333; /* Définit la couleur du texte en gris foncé. */
+}
+
+/* Style pour l'en-tête principal de la page. */
+header {
+    background-image: url("https://img.freepik.com/free-photo/man-using-laptop-night-top-view-web-banner-with-copy-space_169016-53607.jpg?t=st=1733825491~exp=1733829091~hmac=fdb7fbc9a6c6419128abb9e96e8a5c7c373323dfef49760e08918f89bafbfacb&w=1380"); /* Image de fond. */
+    background-color: #333; /* Couleur de fond de secours si l'image ne se charge pas. */
+    height: 30rem; /* Hauteur de l'en-tête. */
+    background-size: contain; /* Ajuste la taille de l'image pour qu'elle s'adapte sans être coupée. */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image. */
+    background-position: right; /* Positionne l'image à droite. */
+    border: #333 2.5rem solid; /* Ajoute une bordure épaisse gris foncé. */
+    color: #fff; /* Texte en blanc. */
+    padding: 1em 0; /* Espacement interne en haut et en bas. */
+}
+
+/* Style pour le texte de l'en-tête. */
+.header-texte {
+    width: 40%; /* Définit une largeur fixe pour le texte. */
+    text-align: center; /* Centre le texte horizontalement. */
+    margin-top: 4rem; /* Ajoute un espacement au-dessus. */
+}
+
+/* Style des titres principaux. */
+h1 {
+    font-size: 2.5rem; /* Taille du texte importante. */
+}
+
+/* Style des sous-titres. */
+h2 {
+    font-size: 2rem; /* Taille légèrement plus petite que h1. */
+}
+
+/* Style pour la barre de navigation. */
+nav {
+    background-color: #444; /* Fond gris foncé. */
+    color: #fff; /* Texte blanc. */
+    padding: 0.1em; /* Légère marge interne. */
+}
+
+nav ul {
+    list-style: none; /* Supprime les puces des listes. */
+    display: flex; /* Affiche les éléments en ligne. */
+    justify-content: center; /* Centre les éléments horizontalement. */
+    gap: 2rem; /* Espacement entre les éléments. */
+}
+
+nav ul li {
+    margin: 0 1em; /* Marges latérales. */
+    font-size: 1.2rem; /* Augmente la taille du texte. */
+}
+
+nav ul li a {
+    color: #fff; /* Liens en blanc. */
+    text-decoration: none; /* Supprime le soulignement des liens. */
+}
+
+nav ul li a:hover {
+    opacity: 0.3; /* Réduit l'opacité au survol. */
+}
+
+/* Style pour le contenu principal. */
+main {
+    padding: 2em; /* Espacement interne généreux. */
+}
+
+/* Style des sections avec animation et couleurs alternées. */
+section {
+    background: #333; /* Fond gris foncé. */
+    margin-bottom: 2em; /* Espacement entre les sections. */
+    padding: 1.5em; /* Espacement interne. */
+    border-radius: 5px; /* Coins arrondis. */
+    box-shadow: 5px 5px 5px rgb(2, 0, 0); /* Ombre rouge foncé. */
+    color: white; /* Texte blanc. */
+    text-align: justify; /* Justifie le texte. */
+    opacity: 0; /* Rend la section invisible initialement. */
+    transform: translateY(20px); /* Décale la section vers le bas. */
+    transition: opacity 1s ease-out, transform 3s ease-out; /* Anime l'apparition. */
+}
+
+section.active {
+    opacity: 1; /* Rend visible. */
+    transform: translateY(0); /* Remet à la position d'origine. */
+}
+
+section:nth-child(even) {
+    background: #333; /* Fond gris foncé pour les sections paires. */
+}
+
+section:nth-child(odd) {
+    background: #ddd; /* Fond gris clair pour les sections impaires. */
+    color: #333; /* Texte gris foncé. */
+}
+
+/* Style pour le pied de page. */
+footer {
+    background-color: #333; /* Fond gris foncé. */
+    color: #fff; /* Texte blanc. */
+    text-align: center; /* Texte centré. */
+    padding: 1em 0; /* Espacement interne. */
+    margin-top: 2em; /* Espacement au-dessus. */
+}
+
+/* Style pour les images avec effet au survol. */
+img {
+    max-width: 100%; /* Limite la largeur maximale. */
+    height: auto; /* Garde les proportions. */
+    display: block; /* Empêche les espaces blancs sous l'image. */
+    margin: 1em auto; /* Centre l'image avec marges. */
+    border: #444 1.5rem solid; /* Bordure épaisse. */
+    transform: translateZ(0); /* Optimisation graphique. */
+    transition: transform 0.3s ease-in-out; /* Animation fluide au survol. */
+}
+
+img:hover {
+    transform: translateY(-20px) scale(1.2); /* Monte et agrandit l'image au survol. */
+}
+
+/* Style pour les images spécifiques des sections. */
+.section-img {
+    max-width: 50%; /* Taille limitée. */
+    border-radius: 10px; /* Coins arrondis. */
+    margin: 1em auto; /* Centre l'image. */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère. */
+}
+
+/* Style pour les sections spécifiques identifiées par ID. */
+#introduction,
+#parcours,
+#stage {
+    display: flex; /* Affiche le contenu en flexbox. */
+}
+
+.introduction_texte,
+.mon_parcours_texte,
+.stage_texte {
+    width: 50%; /* Chaque colonne occupe 50%. */
+    margin-right: 1em; /* Espacement entre les colonnes. */
+    font-size: 1.1rem; /* Taille du texte augmentée. */
+}
+
+/* Centrage des titres des sections. */
+.introduction_texte h2,
+#qui_suis_je h2,
+#parcours h2,
+#mes_experiences h2,
+#stage h2,
+#projet h2 {
+    text-align: center;
+}
+
+.introduction_image,
+.mon_parcours_image,
+.stage_image {
+    width: 50%; /* Taille ajustée. */
+    align-items: center; /* Centre les images verticalement. */
+    align-content: center; /* Centre les images horizontalement. */
+}
+
+/* Style pour les sections avec du texte long. */
+#qui_suis_je,
+#mes_experiences,
+#projet {
+    font-size: 1.1rem; /* Texte légèrement agrandi. */
+}
+
+#qui_suis_je p,
+#mes_experiences p,
+#projet p {
+    margin-bottom: 2em; /* Espacement entre les paragraphes. */
+}
+
+/* Interaction au survol des sections. */
+#introduction:hover {
+    background-color: #ffff; /* Fond blanc au survol. */
+    color: #333; /* Texte gris foncé au survol. */
+}
+
+/* Style pour l'effet "machine à écrire". */
+#typewriter-text {
+    font-family: 'Courier New', Courier, monospace; /* Police à chasse fixe. */
+    white-space: normal; /* Texte en plusieurs lignes si nécessaire. */
+    overflow-wrap: break-word; /* Coupure des mots si trop longs. */
+    word-wrap: break-word; /* Coupure des mots si trop longs (ancien support). */
+    overflow: hidden; /* Cache le débordement. */
+    display: inline-block; /* S'affiche en ligne. */
+    animation: blink 0.7s step-end infinite; /* Effet de clignotement du curseur. */
+    line-height: 1.5; /* Espacement des lignes. */
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Cache le curseur pendant la moitié du cycle. */
+    }
+}
+
+/* Media queries pour les tablettes. */
+@media (max-width: 1024px) {
+    header {
+        height: 25rem; /* Réduit la hauteur de l'en-tête. */
+        background-size: cover; /* Ajuste l'image de fond. */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Passe à plusieurs lignes si nécessaire. */
+        gap: 0.5rem; /* Réduit l'espacement entre les liens. */
+    }
+
+    .header-texte {
+        width: 70%; /* Ajuste la largeur pour les tablettes. */
+        margin: auto; /* Centre le texte. */
+    }
+
+    #introduction,
+    #parcours,
+    #stage {
+        flex-direction: column; /* Superpose les éléments verticalement. */
+    }
+
+    .introduction_texte,
+    .mon_parcours_texte,
+    .stage_texte,
+    .introduction_image,
+    .mon_parcours_image,
+    .stage_image {
+        width: 100%; /* Occupe toute la largeur disponible. */
+    }
+}
+
+/* Media queries pour les smartphones. */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5rem; /* Réduit la taille des titres. */
+    }
+
+    nav ul {
+        flex-direction: row; /* Les liens s'alignent horizontalement. */
+        gap: 1rem; /* Réduit l'espacement. */
+        padding: 0; /* Supprime le padding. */
+    }
+
+    nav ul li {
+        font-size: 1rem; /* Réduit la taille des textes. */
+        margin: 0.5em 0; /* Ajuste les marges. */
+    }
+
+    header {
+        height: 20rem; /* Réduit la hauteur de l'en-tête. */
+    }
+
+    .header-texte {
+        width: 90%; /* Occupe presque toute la largeur. */
+    }
+
+    section {
+        padding: 1em; /* Réduit le padding interne. */
+    }
+
+    /* Applique des styles aux balises <img> */
+    img {
+        max-width: 90%; /* Limite la largeur des images à 90% de leur conteneur parent */
+        margin: 1em auto; /* Ajoute une marge externe de 1em et centre horizontalement l'image */
+    }
+
+    /* Applique des styles aux sections avec les identifiants introduction, parcours et stage */
+    #introduction,
+    #parcours,
+    #stage {
+        flex-direction: column; /* Définit l'orientation des éléments enfants sur une disposition verticale dans un conteneur flex */
+    }
+
+    /* Applique des styles aux classes introduction_texte, mon_parcours_texte et stage_texte */
+    .introduction_texte,
+    .mon_parcours_texte,
+    .stage_texte {
+        width: 100%; /* Étend les éléments sur toute la largeur disponible de leur conteneur parent */
+    }
+
+    /* Applique des styles aux classes introduction_image, mon_parcours_image et stage_image */
+    .introduction_image,
+    .mon_parcours_image,
+    .stage_image {
+        width: 100%; /*Étend les éléments sur toute la largeur disponible de leur conteneur parent */
+    }
+}
