@@ -12,12 +12,12 @@ body {
 
 /* Style pour l'en-tête principal de la page. */
 header {
-    background-image: url("https://img.freepik.com/free-photo/man-using-laptop-night-top-view-web-banner-with-copy-space_169016-53607.jpg?t=st=1733825491~exp=1733829091~hmac=fdb7fbc9a6c6419128abb9e96e8a5c7c373323dfef49760e08918f89bafbfacb&w=1380"); /* Image de fond. */
+    background-image: url("/image\ header.png"); /* Image de fond. */
     background-color: #333; /* Couleur de fond de secours si l'image ne se charge pas. */
     height: 30rem; /* Hauteur de l'en-tête. */
-    background-size: contain; /* Ajuste la taille de l'image pour qu'elle s'adapte sans être coupée. */
+    background-size: 100% auto; /* Ajuste la taille de l'image pour qu'elle s'adapte sans être coupée. */
     background-repeat: no-repeat; /* Empêche la répétition de l'image. */
-    background-position: right; /* Positionne l'image à droite. */
+    background-position: center; /* Positionne l'image à droite. */
     border: #333 2.5rem solid; /* Ajoute une bordure épaisse gris foncé. */
     color: #fff; /* Texte en blanc. */
     padding: 1em 0; /* Espacement interne en haut et en bas. */
